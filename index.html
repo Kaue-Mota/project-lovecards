@@ -13,7 +13,7 @@
   <header>
     <div class="logo-container">
       <img src="src/images/eternarelogosfundo.png" alt="Logo ETERNARE" class="logo" />
-      <h1>ETERNARE.IT</h1>
+      <img class="text-logo" src="src/images/TIPOLOGO.png" alt="logoescrita">
     </div>
     <div class="buttons-container">
 
@@ -39,12 +39,22 @@
       <small id="alertaFotos" style="color:#ff6b6b; margin-top:6px; display:none;">Você pode selecionar até 5
         imagens.</small>
 
-      <label for="musica">Link embed Spotify</label>
-      <input type="text" id="musica" placeholder="Ex: https://open.spotify.com/embed/track/..." />
+      <label>Coloque o link do Spotify</label>
+      <input class="input-spotify" type="text" id="spotifyLink" placeholder="Cole o link aqui">
+      <br>
+      <button class="btn-gerar-link" onclick="gerarEmbed()">Gerar Player</button>
+
+
+
 
       <label for="dataInicio">Data de início da memória</label>
       <input type="date" id="dataInicio" required />
     </form>
+
+    <div class="preview-header">
+      <h2 class="preview-title">Preview de como ficará sua lembrança</h2>
+      <p class="arrow">⌄</p>
+    </div>
 
     <div class="preview" id="preview">
 
@@ -53,24 +63,24 @@
       </div>
       <h2>preview de como ficará sua lembrancinha</h2>
 
-      <div id="previewMusica"></div>
+      <div id="player"></div>
 
 
       <div class="carousel" id="carousel" style="display:none"></div>
       <div class="dots" id="dots"></div>
 
-      
-        <div class="loveTimer">
-          <div id="loveTimer">TEMPO</div>
-        </div>
 
-        <h1 id="previewTitulo">Seu título aqui</h1>
+      <div class="loveTimer">
+        <div id="loveTimer">TEMPO</div>
+      </div>
 
-        <div class="preview-mensagem-container">
-          <p id="previewMensagem">Sua mensagem especial aparecerá aqui.</p>
-        </div>
+      <h1 id="previewTitulo">Seu título aqui</h1>
 
-      
+      <div class="preview-mensagem-container">
+        <p id="previewMensagem">Sua mensagem especial aparecerá aqui.</p>
+      </div>
+
+
   </section>
 
   <script src="src/scripts/index.js"></script>

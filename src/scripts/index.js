@@ -159,20 +159,23 @@
   }
 
   // Música Spotify
-  musicaInput.addEventListener('input', () => {
-    const url = musicaInput.value.trim();
-    if (!url) {
-      previewMusica.innerHTML = '';
-      return;
-    }
+  function gerarEmbed() {
+    const link = document.getElementById("spotifyLink").value;
+    const regex = /spotify\.com\/(track|album|playlist|episode)\/([a-zA-Z0-9]+)/;
+    const match = link.match(regex);
 
-    if (!url.includes('open.spotify.com/embed')) {
-      previewMusica.innerHTML = '<small style="color:#800080;">Coloque o link de embed do Spotify correto.</small>';
-      return;
+    if (match) {
+        const type = match[1];
+        const id = match[2];
+        const embedUrl = `https://open.spotify.com/embed/${type}/${id}?utm_source=generator`;
+        
+        document.getElementById("player").innerHTML = `
+            <iframe src="${embedUrl}" width="300" height="380" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        `;
+    } else {
+        alert("Link inválido do Spotify!");
     }
-
-    previewMusica.innerHTML = `<iframe src="${url}" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
-  });
+}
 
   // Inicializa valores padrões
   previewTitulo.textContent = 'Seu título aqui';

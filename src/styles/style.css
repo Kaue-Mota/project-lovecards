@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 90vh;
+}
+
 section {
   padding: 20px;
   font-family: "Inter", sans-serif;
@@ -18,7 +22,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
   min-width: 100%;
   padding-top: 100px;
@@ -26,6 +29,7 @@ section {
 
 header {
   z-index: 10;
+  height: 80px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -44,14 +48,30 @@ header .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  
 }
 
-header .logo-container img {
-  width: 110px;
+header .logo-container .logo {
+  scale: 2;
+  width: 50px;
   height: 50px;
   object-fit: cover;
   object-position: center;
 }
+
+header .logo-container .text-logo {
+  position: absolute;
+  left: 100px;
+  top: 13px;
+  scale: 2;
+  width: 110px;
+  height: 20px;
+  object-fit: cover;
+  object-position: center;
+
+}
+
 
 header .logo-container h1 {
   display: flex;
@@ -74,10 +94,10 @@ header .buttons-container {
 }
 
 header .buttons-container a {
-  border: rebeccapurple 2px solid;
+  border-bottom: rebeccapurple 2px solid;
   font-family: "Boldonse", system-ui;
   text-decoration: none;
-  padding: 5px 10px;
+  
   font-size: 1rem;
   font-weight: 600;
   background-image: linear-gradient(to left, rebeccapurple, rgb(64, 93, 224));
@@ -86,7 +106,6 @@ header .buttons-container a {
   background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -108,8 +127,7 @@ form,
   display: flex;
   flex-direction: column;
   margin: 25px;
-  margin-left: auto;
-  margin-right: auto;
+  
 }
 
 form {
@@ -118,7 +136,7 @@ form {
 }
 
 form h2 {
-  background-image: linear-gradient(to left, rebeccapurple, rgb(64, 93, 224));
+  background-image: linear-gradient(to right, rebeccapurple, rgb(64, 93, 224));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -133,7 +151,7 @@ form h2 {
 .preview {
   scrollbar-width: none;
   overflow-y: scroll;
-  height: 822px;
+  height: 850px;
   align-items: center;
   justify-content: flex-start;
   background: linear-gradient(-45deg, #830707, #100711, #440404);
@@ -186,10 +204,14 @@ h2 {
 }
 
 label {
+  background-image: linear-gradient(to right, rebeccapurple, rgb(64, 93, 224));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-top: 20px;
   font-weight: 600;
   font-size: 0.9rem;
-  color: #aab9ff;
+  
 }
 
 input[type="text"],
@@ -203,7 +225,6 @@ input[type="file"] {
   margin-top: 8px;
   padding: 12px 14px;
   font-size: 1rem;
-  border-radius: 8px;
   border: none;
   background: #2f3264;
   color: #d7def8;
@@ -336,6 +357,47 @@ textarea {
 /* Iframe Spotify */
 iframe {
   border-radius: 12px;
-  height: 80px;
-  border: none;
+        border: none;
 }
+
+.btn-gerar-link {
+  background: linear-gradient(to right, rebeccapurple, rgb(64, 93, 224));
+  border: none;
+  border-radius: 0 0 10px 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 12px 16px;
+  transition: background 0.3s ease;
+}
+
+.btn-gerar-link:hover {
+  background: linear-gradient(to right, rgb(64, 93, 224), rebeccapurple);
+}
+
+.input-spotify {
+ border-radius: 10px 10px 0 0;
+}
+
+.preview-header {
+  display: flex;
+   flex-direction: column;
+  text-align: center;
+  padding: 12px 12px;
+  
+
+  
+  position: relative;
+}
+
+.arrow {
+  
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  color: #aab9ff;
+  transition: transform 0.3s ease;
+}
+
+
