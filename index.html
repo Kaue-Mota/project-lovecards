@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lembrancinha para Casais - Estilo Sério</title>
+  <link rel="stylesheet" href="src/styles/style.css">
+  <link rel="stylesheet" href="src/styles/responsive.css">
+
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="src/images/eternarelogosfundo.png" alt="Logo ETERNARE" class="logo" />
+      <h1>ETERNARE <P>.IT</P></h1>
+    </div>
+    <div class="buttons-container">
+
+      <a href="#" class="btn-contato">CONTATO</a>
+    </div>
+  </header>
+
+  <section>
+
+
+
+    <form id="formPersonalizacao" autocomplete="off">
+      <h2>Personalize sua memória</h2>
+
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" placeholder="Ex: Feliz aniversário, amor!" required />
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" placeholder="Escreva uma mensagem especial..." required></textarea>
+
+      <label for="foto">Fotos do casal (várias, máximo 5)</label>
+      <input type="file" id="foto" accept="image/*" multiple />
+      <small id="alertaFotos" style="color:#ff6b6b; margin-top:6px; display:none;">Você pode selecionar até 5
+        imagens.</small>
+
+      <label for="musica">Link embed Spotify</label>
+      <input type="text" id="musica" placeholder="Ex: https://open.spotify.com/embed/track/..." />
+
+      <label for="dataInicio">Data de início da memória</label>
+      <input type="date" id="dataInicio" required />
+    </form>
+
+    <div class="preview" id="preview">
+
+      <div class="notch">
+        <p></p>
+      </div>
+      <h2>preview de como ficará sua lembrancinha</h2>
+
+      <div id="previewMusica"></div>
+
+
+      <div class="carousel" id="carousel" style="display:none"></div>
+      <div class="dots" id="dots"></div>
+
+      
+        <div class="loveTimer">
+          <div id="loveTimer">TEMPO</div>
+        </div>
+
+        <h1 id="previewTitulo">Seu título aqui</h1>
+
+        <div class="preview-mensagem-container">
+          <p id="previewMensagem">Sua mensagem especial aparecerá aqui.</p>
+        </div>
+
+      
+  </section>
+
+  <script src="src/scripts/index.js"></script>
+
+
+</body>
+
+</html>
