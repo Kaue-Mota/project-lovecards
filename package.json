@@ -1,9 +1,4 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "mercadopago": "^2.8.0"
-  },
   "name": "project-lovecards",
   "version": "1.0.0",
   "description": "",
@@ -21,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Kaue-Mota/project-lovecards/issues"
   },
-  "homepage": "https://github.com/Kaue-Mota/project-lovecards#readme"
+  "homepage": "https://github.com/Kaue-Mota/project-lovecards#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mercadopago": "^2.8.0"
+  }
 }
