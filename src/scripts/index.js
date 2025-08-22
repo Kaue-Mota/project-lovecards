@@ -178,6 +178,23 @@
 }
 
   // Inicializa valores padrões
-  previewTitulo.textContent = 'Seu título aqui';
-  previewMensagem.textContent = 'Sua mensagem especial aparecerá aqui.';
-  loveTimer.textContent = 'TEMPO DA MEMORIA';
+ 
+
+  //pagamento
+document.getElementById("meuBotao").addEventListener("click", () => {
+  fetch("http://localhost:3000/create-preference", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+    .then(res => res.json())
+    .then(data => {
+      console.log("Preference criada:", data);
+      // redireciona para o checkout do Mercado Pago
+      window.location.href = data.init_point;
+    })
+    .catch(err => console.error("Erro ao criar preferência:", err));
+});
+
+ 
