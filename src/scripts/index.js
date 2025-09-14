@@ -1,5 +1,5 @@
 
-import app from "./server.js";
+
 
 
 // Inputs
@@ -177,8 +177,7 @@ import app from "./server.js";
     }
 }
 
-  // Inicializa valores padrões
-<<<<<<< HEAD
+
  
 
   //pagamento
@@ -197,23 +196,3 @@ document.getElementById("meuBotao").addEventListener("click", () => {
     })
     .catch(err => console.error("Erro ao criar preferência:", err));
 });
-
- 
-=======
-  previewTitulo.textContent = 'Seu título aqui';
-  previewMensagem.textContent = 'Sua mensagem especial aparecerá aqui.';
-  loveTimer.textContent = 'TEMPO DA MEMORIA';
-
-
-  document.getElementById("botao-gerar").addEventListener("click", async () => {
-    const response = await fetch("http://localhost:3000/create_preference", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" }
-    });
-
-    const data = await response.json();
-    if (data.url) {
-        window.location.href = data.url; // redireciona para o checkout do MP
-    }
-});
->>>>>>> d96d8491e5f2cd818c323508ec3271d0dff9ccec
